@@ -1,5 +1,6 @@
 /*
- The Linked list implementation in this code is completely implemented by my own assumptions and experienace 
+ The Linked list implementation in this code is completely implemented by my own assumptions, experienace and experiments.
+This is only the demo for learning purpose only.
  */
 package codepractice;
 
@@ -15,12 +16,9 @@ public class LinkedList {
         Scanner sc = new Scanner(System.in);
         int i=0;
         System.out.println("Enter Any number: ");
-        while(i<6){
-            
-            
+        while(i<6){     
             i++;
-            LinkedList.insert(sc.nextInt());
-            
+            LinkedList.insert(sc.nextInt());      
         }
         
         System.out.println("Elements of Linked List:");
@@ -32,8 +30,7 @@ public class LinkedList {
         current = First;
         while(current.next!=null){
             current.display();
-            current=current.next;
-          
+            current=current.next;     
         }
     }
     
@@ -61,17 +58,11 @@ class Node{
     
     int n=0;
     Node previous=null ,next=null;
-    static int counter=0;
     
-    Node(){
-        counter++;
-       
-    }
+    Node(){}
     
     Node(int sn){
-      
         n = sn;
-        counter++;
     }
     
     public void display(){
