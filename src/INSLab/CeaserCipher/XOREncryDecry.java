@@ -18,23 +18,22 @@ public class XOREncryDecry {
         j=0;
         for(i=0 ; i< plainText.length(); i++){
             if(j==key.length()-1){
-              cipherText=cipherText+(char) (plainText.charAt(i) ^ key.charAt(j));
-
-              j=0;           
+              
+                cipherText=cipherText+(char) (plainText.charAt(i) ^ key.charAt(j));
+                j=0;           
             }
             else{
+                
                 cipherText=cipherText+(char) (plainText.charAt(i) ^ key.charAt(j));
-
                 j++;               
             }
         }
              
         System.out.println("Cipher Text is: "+ cipherText);     
         
-           
-        
         j=0;
         for(i=0 ; i< cipherText.length(); i++){
+         
             if(j==key.length()-1){
 
               decryptedText=decryptedText+(char) (cipherText.charAt(i) ^ key.charAt(j));
@@ -42,13 +41,10 @@ public class XOREncryDecry {
                 j=0;        
             }
             else{
-
                 decryptedText=decryptedText+(char) (cipherText.charAt(i) ^ key.charAt(j));
                 j++;               
             }
-        }
-        
-        System.out.println("Decrypted Text is: "+decryptedText);       
-        
+        }     
+        System.out.println("Decrypted Text is: "+decryptedText);           
     }
 }
